@@ -1,14 +1,8 @@
--- ============================================================
---  SUBWAY USA LOCATION ANALYTICS — MySQL Project (v2 FIXED)
---  FIX 1: Added DROP TABLE IF EXISTS — safe to re-run anytime
---  FIX 2: Replaced PERCENTILE_CONT with NTILE(10) in Q9
---  FIX 3: Q10 threshold lowered to 2+ (works with sample data)
--- ============================================================
+--  SUBWAY USA LOCATION ANALYTICS — MySQL Project 
 
 CREATE DATABASE IF NOT EXISTS subway_analytics;
 USE subway_analytics;
 
--- Safe re-run: drop in correct order (child tables first)
 DROP TABLE IF EXISTS stores;
 DROP TABLE IF EXISTS cities;
 DROP TABLE IF EXISTS states;
